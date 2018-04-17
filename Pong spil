@@ -1,4 +1,4 @@
-#Vashowstheworld for code cw
+#VAshowstheworld har programeret
 
 import random
 import pygame
@@ -18,11 +18,11 @@ BLACK = (0, 0, 0)
 WIDTH = 600
 HEIGHT = 400
 BALL_RADIUS = 20
-PAD_WIDTH = 8
-PAD_HEIGHT = 80
+PAD_WIDTH = 9
+PAD_HEIGHT = 81
 HALF_PAD_WIDTH = PAD_WIDTH // 2
 HALF_PAD_HEIGHT = PAD_HEIGHT // 2
-ball_pos = [0, 0]
+ball_pos = [1, 0]
 ball_vel = [0, 0]
 paddle1_vel = 0
 paddle2_vel = 0
@@ -31,7 +31,7 @@ r_score = 0
 
 
 window = pygame.display.set_mode((WIDTH, HEIGHT), 0, 32)
-pygame.display.set_caption('Daylight Pong')
+pygame.display.set_caption('Vashowstheworld PONG')
 
 
 def ball_init(right):
@@ -125,11 +125,11 @@ def draw(canvas):
 
 
     myfont1 = pygame.font.SysFont("Comic Sans MS", 20)
-    label1 = myfont1.render("Score " + str(l_score), 1, (255, 255, 0))
+    label1 = myfont1.render("blå " + str(l_score), 1, (255, 255, 0))
     canvas.blit(label1, (50, 20))
 
     myfont2 = pygame.font.SysFont("Comic Sans MS", 20)
-    label2 = myfont2.render("Score " + str(r_score), 1, (255, 255, 0))
+    label2 = myfont2.render("grøn " + str(r_score), 1, (255, 255, 0))
     canvas.blit(label2, (470, 20))
 
 
@@ -140,7 +140,7 @@ def keydown(event):
         paddle2_vel = -8
     elif event.key == K_DOWN:
         paddle2_vel = 8
-    elif event.key == K_z:
+    elif event.key == K_w:
         paddle1_vel = -8
     elif event.key == K_s:
         paddle1_vel = 8
